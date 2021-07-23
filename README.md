@@ -9,3 +9,10 @@ NFT:  blockchain + Asset(Art)
 ...
 ```
 ### NFT
+keywords: authenticity, royalty
+- NFT
+- NFT wallet
+- NFT marketplace
+- NFT lending platfrom
+### Defi
+
