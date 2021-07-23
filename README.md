@@ -14,5 +14,10 @@ keywords: authenticity, royalty
 - NFT wallet
 - NFT marketplace
 - NFT lending platfrom
+
+ERC20 | ERC721
+------|------
+mapping(address => uint256) | tokenURI,tokenId, MetaData
+
 ### Defi
 
