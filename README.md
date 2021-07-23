@@ -4,7 +4,7 @@ solidity sample codes, patterns, everything for it
 - Blockchain represents decentralization, transparency, democracy.
 - Ethereum leads blockchain by EVM & innovative ideas, but it suffers from its low TPS & high gas price. It gave a great opportunity to EVM + POS/PBFT solution providers  like binance-chain, huobi-chain, okex-chain,...
 - Decentralization vs. Centralization. The War already began.
-- Blockchain is a Belief rather than technology.
+- Blockchain is a Belief rather than technology or trend.
 ```
 Defi: blockchain + bank function(lend, loan)
 IPFS: blockahin + storage
