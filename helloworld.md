@@ -20,13 +20,24 @@ cd dapp-hello-world
 
 [run.]
 ganache-cli
+truffle console
+> compile
+> migrate
 
 [interactive]
 truffle develop
 > compile
 > migrate
 
-[test]
+[truffle.functions]
 truffle test
 truffle compile
+
+[test.contracts]
+$ truffle console
+truffle(develop)> compile
+truffle(develop)> migrate
+truffle(development)> let instance = await MyStatus.deployed()
+truffle(development)> await instance.getStatus()
+truffle(development)> await instance.setStatus("Available")
 ```
