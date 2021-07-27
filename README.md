@@ -8,6 +8,14 @@ DEX:  blockchain + Exchange(opposite-CEX)
 NFT:  blockchain + Asset(Art)
 ...
 ```
+### Build
+```
+alias solc420='function _solc420(){ docker run --rm -v `pwd`:/root ethereum/solc:0.4.20 --bin --abi --optimize --overwrite /root/$1 -o /root/build; };_solc420'
+alias solc510='function _solc510(){ docker run --rm -v `pwd`:/root ethereum/solc:0.5.10 --bin --abi --optimize --overwrite /root/$1 -o /root/build; };_solc510'
+alias solc425='function _solc425(){ docker run --rm -v `pwd`:/root ethereum/solc:0.4.25 --bin --abi --optimize --overwrite /root/$1 -o /root/build; };_solc425'
+alias solc424='function _solc424(){ docker run --rm -v `pwd`:/root ethereum/solc:0.4.24 --bin --abi --optimize --overwrite /root/$1 -o /root/build; };_solc424'
+
+```
 ### Cost
 ```
 [public vs. external]
