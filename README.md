@@ -8,6 +8,13 @@ DEX:  blockchain + Exchange(opposite-CEX)
 NFT:  blockchain + Asset(Art)
 ...
 ```
+### Cost
+```
+[public vs. external]
+external function cheaper than public function.
+
+```
+## Complex
 ### NFT
 keywords: authenticity, royalty
 - NFT
