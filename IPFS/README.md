@@ -24,7 +24,8 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJiYmQ1NDU
 ```
 - https://nft.storage/
 # Content Market
-
+- [access control](https://docs.openzeppelin.com/contracts/3.x/access-control)
+- 
  typ. | short clip|low quality|
 ------|-----------|---
 book  | marketing| none
