@@ -1,3 +1,11 @@
+# Content Market
+
+ typ. | short clip|low quality|
+------|-----------|---
+book  | marketing| none
+picture| marketing|marketing
+video | marketing|marketing
+music | marketing|marketing
 ## [Why IPFS for NFT?](https://docs.ipfs.io/how-to/mint-nfts-with-ipfs/#how-ipfs-helps)
 
 When an NFT is created and linked to a digital file that lives on some other system, how the data is linked is very important. There are a few reasons why traditional HTTP links aren't a great fit.
