@@ -54,7 +54,7 @@ Check out some of the other files in this directory:
   ./readme          <-- this file
   ./security-notes
 
-$ ipfs cat /ipfs/QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG/quick-start
+$ ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/quick-start
 
 $ ipfs daemon
 >>>
