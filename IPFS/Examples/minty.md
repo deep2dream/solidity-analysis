@@ -7,7 +7,13 @@ git clone https://github.com/yusefnapora/minty
 cd minty
 npm install
 npm link
+
 ./start-local-environment.sh
+[start-local-environment.sh: line 2: $'\r': command not found]
+sed $'s/\r$//' ./start-local-environment.sh > ./start-local-environment.ex.sh
+chmod 755 ./start-local-environment.ex.sh
+./start-local-environment.ex.sh
+
 minty deploy
 touch ~/flight-to-the-moon.txt
 >>>
