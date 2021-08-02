@@ -1,5 +1,4 @@
 ## [Why IPFS for NFT?](https://docs.ipfs.io/how-to/mint-nfts-with-ipfs/#how-ipfs-helps)
-```
 
 When an NFT is created and linked to a digital file that lives on some other system, how the data is linked is very important. There are a few reasons why traditional HTTP links aren't a great fit.
 
@@ -13,14 +12,10 @@ Using the CID, anyone can fetch a copy of the data from the IPFS network as long
 
 Of course, there may be some cases in which you do want to change the metadata for an NFT after it's been published. That's no problem! You'll just need to add support to your smart contract for updating the URI for a token after it's been issued. That will let you change the URI to a new IPFS URI while still leaving a record of the initial version in the blockchain's transaction history. This provides accountability and makes it clear to everyone what was changed, when, and by whom.
 
-
-```
-## [nft with IPFS](https://docs.ipfs.io/how-to/mint-nfts-with-ipfs/#a-short-introduction-to-nfts)
+## [NFT with IPFS](https://docs.ipfs.io/how-to/mint-nfts-with-ipfs/#a-short-introduction-to-nfts)
 - ipfs vs. filecoin?
-```
-[IPFS is Not a Blockchain]
-Since IPFS isn't a blockchain, we'll be leveraging the power of the Ethereum blockchain for this guide. However, the steps described here can just as easily be applied to other blockchains.
-```
+
+**Since IPFS isn't a blockchain**, we'll be leveraging the power of the Ethereum blockchain for this guide. However, the steps described here can just as easily be applied to other blockchains.
 ## ipfs.io
 - https://ipfs.io/#install
 - https://ipfs.io/#how
