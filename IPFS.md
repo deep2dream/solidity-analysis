@@ -2,18 +2,45 @@
 
 When an NFT is created and linked to a digital file that lives on some other system, how the data is linked is very important. There are a few reasons why traditional HTTP links aren't a great fit.
 
-With an HTTP address like https://cloud-bucket.provider.com/my-nft.jpeg, anyone can fetch the contents of my-nft.jpeg, as long as the owner of the server pays their bills. However, there's no way to guarantee that the contents of my-nft.jpeg are the same as they were when the NFT was created. The server owner can easily replace my-nft.jpeg with something completely different at any time, causing the NFT to change its meaning.
+With an HTTP address like https://cloud-bucket.provider.com/my-nft.jpeg, anyone can fetch the contents of my-nft.jpeg, as long as the owner of the server pays their bills. However, there's **no way to guarantee that the contents of my-nft.jpeg are the same** as they were when the NFT was created. The server owner can easily replace my-nft.jpeg with something completely different at any time, causing the NFT to change its meaning.
 
 This problem was demonstrated by an artist who pulled the rug (opens new window) on NFTs he created by changing their images after they were minted and sold to others.
 
-IPFS solves this problem thanks to Content Addressing. Adding data to IPFS produces a content identifier (CID) that's directly derived from the data itself and links to the data in the IPFS network. Because a CID can only ever refer to one piece of content, we know that nobody can replace or alter the content without breaking the link.
+IPFS solves this problem thanks to **Content Addressing**. Adding data to IPFS produces a **content identifier (CID)** that's directly **derived from** the data itself and **links to** the data in the IPFS network. Because a CID can only ever refer to one piece of content, we know that **nobody can replace or alter the content without breaking the link**.
 
-Using the CID, anyone can fetch a copy of the data from the IPFS network as long as at least one copy exists on the network, even if the original provider has disappeared. This makes CIDs perfect for NFT storage. All we need to do is put the CID into an ipfs:// URI like ipfs://bafybeidlkqhddsjrdue7y3dy27pu5d7ydyemcls4z24szlyik3we7vqvam/nft-image.png, and we have an immutable link from the blockchain to the data for our token.
+Using the CID, *anyone can fetch a copy of the data* from the IPFS network *as long as at least one copy exists on the network*, even if the original provider has disappeared. This makes CIDs perfect for NFT storage. All we need to do is **put the CID into an ipfs:// URI** like ipfs://bafybeidlkqhddsjrdue7y3dy27pu5d7ydyemcls4z24szlyik3we7vqvam/nft-image.png, and we have an *immutable link* from the blockchain to the data for our token.
 
-Of course, there may be some cases in which you do want to change the metadata for an NFT after it's been published. That's no problem! You'll just need to add support to your smart contract for updating the URI for a token after it's been issued. That will let you change the URI to a new IPFS URI while still leaving a record of the initial version in the blockchain's transaction history. This provides accountability and makes it clear to everyone what was changed, when, and by whom.
+Of course, there may be some cases in which you do want to change the metadata for an NFT after it's been published. That's no problem! You'll just need to add support to your smart contract for updating the URI for a token after it's been issued. That will let you **change the URI to a new IPFS URI** while **still leaving a record of the initial version in the blockchain's transaction history**. This provides accountability and makes it clear to everyone what was changed, when, and by whom.
+### Summary
+1. Content Addressing for integrity
+```
+http://, you pay for the content, but no guarentee for its integrity. It can be replaced or altered by provider.
+ipfs://, url is a immutable link with hash(content). The integrity is highly guarenteed.
 
-## [NFT with IPFS](https://docs.ipfs.io/how-to/mint-nfts-with-ipfs/#a-short-introduction-to-nfts)
-- ipfs vs. filecoin?
+hash(content), url
+[upload]
+$ ipfs add nft.jpg
+>>>
+added QmQ9YxmRtbs2dEppubBtb6rSUpX6ZTUbNPXpDt5EWXk7NT nft.jpg
+ 294.17 KiB / 294.17 KiB [====================================================================================================================================================================================================] 100.00%
+
+[download]
+$ ipfs cat /ipfs/hash(content)
+$ wget https://ipfs.io/ipfs/hash(content)
+ex:
+ipfs cat /ipfs/QmQ9YxmRtbs2dEppubBtb6rSUpX6ZTUbNPXpDt5EWXk7NT > launch.jpg
+
+```
+2. Blockchain for accountability, tracing, copyright protection, pay-on-go
+```
+Tracing: you can change URI for NFT token. But it will be recorded in the blockchain
+Accountability: 
+Pay-on-Go: you will directly buy ownership or accessibility using blockchain & its cryptocurrency
+```
+3. TokenURI:=1:1
+
+
+### [ipfs vs. filecoin](https://docs.ipfs.io/how-to/mint-nfts-with-ipfs/#a-short-introduction-to-nfts)
 
 **Since IPFS isn't a blockchain**, we'll be leveraging the power of the Ethereum blockchain for this guide. However, the steps described here can just as easily be applied to other blockchains.
 ## ipfs.io
