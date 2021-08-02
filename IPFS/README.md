@@ -1,3 +1,28 @@
+### browsers enabled
+- https://brave.com/
+```
+sudo apt install apt-transport-https curl
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser
+```
+### storage
+- https://app.pinata.cloud/pinmanager
+```
+https://app.pinata.cloud/keys
+[API-KEY]
+API Key
+7b0f993f4fbaf0fcd799
+
+API Secret
+020abddc2d136bc633c22b06e45b439057b9e77d6f7afa923eb912f498564d62
+
+JWT
+(Secret access token)
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJiYmQ1NDU4MS03MDhmLTRjMWEtYTJhZS04NjI5NzgyNDdiYjYiLCJlbWFpbCI6Imdhb2p1bnlpbmdAeWFuZGV4LmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaW5fcG9saWN5Ijp7InJlZ2lvbnMiOlt7ImlkIjoiTllDMSIsImRlc2lyZWRSZXBsaWNhdGlvbkNvdW50IjoxfV0sInZlcnNpb24iOjF9LCJtZmFfZW5hYmxlZCI6ZmFsc2V9LCJhdXRoZW50aWNhdGlvblR5cGUiOiJzY29wZWRLZXkiLCJzY29wZWRLZXlLZXkiOiI3YjBmOTkzZjRmYmFmMGZjZDc5OSIsInNjb3BlZEtleVNlY3JldCI6IjAyMGFiZGRjMmQxMzZiYzYzM2MyMmIwNmU0NWI0MzkwNTdiOWU3N2Q2ZjdhZmE5MjNlYjkxMmY0OTg1NjRkNjIiLCJpYXQiOjE2Mjc4OTYyODd9.pQvqJ9d7jWLzhh72PlCnWO7m0bYSwbQIMCl-bTNkT2s
+```
+- https://nft.storage/
 # Content Market
 
  typ. | short clip|low quality|
