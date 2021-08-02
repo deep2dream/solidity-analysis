@@ -7,15 +7,15 @@
 - https://docs.ipfs.io/how-to/command-line-quick-start
 - https://www.quicknode.com/guides/solidity/how-to-create-and-deploy-an-erc-721-nft
 ```
-wget	https://dist.ipfs.io/go-ipfs/v0.9.0/go-ipfs_v0.9.0_linux-amd64.tar.gz
-tar	-xvzf	go-ipfs_v0.9.0_linux-amd64.tar.gz
-cd	go-ipfs/
+wget https://dist.ipfs.io/go-ipfs/v0.9.0/go-ipfs_v0.9.0_linux-amd64.tar.gz
+tar -xvzf go-ipfs_v0.9.0_linux-amd64.tar.gz
+cd go-ipfs/
 ./install.sh
-sudo	./install.sh
 ipfs --version
 ```
 ### use
 ```
+[init.node]
 $ ipfs init
 >>>
 generating ED25519 keypair...done
@@ -83,6 +83,7 @@ WebUI: http://127.0.0.1:5001/webui
 Gateway (readonly) server listening on /ip4/127.0.0.1/tcp/8080
 Daemon is ready
 
+[upload]
 $ ipfs add image-asset.jpeg
 >>>
 added QmQ9YxmRtbs2dEppubBtb6rSUpX6ZTUbNPXpDt5EWXk7NT image-asset.jpeg
@@ -99,4 +100,23 @@ $ vim nft.json
 }
 
 $ ipfs add nft.json
+added QmPutrmFkNvCz9bR2UoW3V8BRrm6o81Fi3b91VDJmtXoL1 nft.json
+ 174 B / 174 B [==============================================================================================================================================================================================================] 100.00%
+ 
+[download]
+$ ipfs cat /ipfs/QmQ9YxmRtbs2dEppubBtb6rSUpX6ZTUbNPXpDt5EWXk7NT > nft.jpg
+$ ipfs cat /ipfs/QmPutrmFkNvCz9bR2UoW3V8BRrm6o81Fi3b91VDJmtXoL1 > nft.json
+
+[check.peers]
+ipfs swarm peers
+
+[check.gateway]
+hash=`echo "I <3 IPFS -$(whoami)" | ipfs add -q`
+curl "https://ipfs.io/ipfs/$hash"
+>>>
+curl: (7) Failed to connect to ipfs.io port 443: Connection timed out
+
+[web.console]
+localhost:5001/webui
+
 ```
