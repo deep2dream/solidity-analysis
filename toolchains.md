@@ -1,9 +1,11 @@
 # toolchains
-## truffle
+## build
+### hardhat
+- [hardhat](https://hardhat.org/hardhat-network/)
+### truffle
 - https://github.com/gregbkr/geth-truffle-docker
 - https://www.trufflesuite.com/docs/ganache/overview
-
-## nvm
+### nvm
 - https://github.com/deep2dream/fabric-analysis/blob/main/fabric-samples/nvm.md
 ```
 [nvm.install]
@@ -16,5 +18,3 @@ nvm install 12.18.1
 https://consensys.net/diligence/tools/
 - [mythril](https://github.com/ConsenSys/mythril)
 - [oyente](https://github.com/enzymefinance/oyente)
-## build
-- [hardhat](https://hardhat.org/hardhat-network/)
