@@ -12,3 +12,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 [node.install]
 nvm install 12.18.1
 ```
+## security check
+https://consensys.net/diligence/tools/
+- [mythril](https://github.com/ConsenSys/mythril)
+- [oyente](https://github.com/enzymefinance/oyente)
