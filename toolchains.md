@@ -16,3 +16,5 @@ nvm install 12.18.1
 https://consensys.net/diligence/tools/
 - [mythril](https://github.com/ConsenSys/mythril)
 - [oyente](https://github.com/enzymefinance/oyente)
+## build
+- [hardhat](https://hardhat.org/hardhat-network/)
