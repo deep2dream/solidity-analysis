@@ -4,7 +4,7 @@
 ```bash
 # mkdir nft; cd nft
 nft# npm init --yes
-nft# npm install --save-dev hardhat@2.2.1
+nft# npm install --save-dev hardhat@2.4.3
 nft# npx hardhat
 >>> Choose Create an empty hardhat.config.js
 888    888                      888 888               888
@@ -91,6 +91,20 @@ describe("MyCryptoLions", function () {
   });
 });
 ```
+```
+# npx hardhat test
+
+
+  MyCryptoLions
+name MyCryptoLions
+symbol MCL
+msg.sender 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+    ✓ Should return the right name and symbol (896ms)
+
+
+  1 passing (899ms)
+
+```
 ### Deploy
 - scripts/deploy.js
 ```js
@@ -109,5 +123,14 @@ main()
     console.error(error);
     process.exit(1);
   });
+
+```
+```
+npx hardhat run scripts/deploy.js
+>>>
+name MyCryptoLions
+symbol MCL
+msg.sender 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+MyCryptoLions deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 
 ```
