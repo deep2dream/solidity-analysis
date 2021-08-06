@@ -1,0 +1,2 @@
+- https://opensourcelibs.com/libs/ethereum-dapp
+- https://github.com/jasonwalsh/awesome-dapps
