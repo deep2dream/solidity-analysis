@@ -1,4 +1,5 @@
 - https://github.com/ipfs/awesome-ipfs
+- https://awesome.ipfs.io/
 ### browsers enabled
 - https://brave.com/
 ```
