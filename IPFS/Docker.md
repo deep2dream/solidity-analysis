@@ -49,6 +49,9 @@ docker exec ipfs_host ipfs add -r /export/<something>
 >>>
  910 B / 910 B  100.00%added QmU2oUVxqzySCzbHcLU2LYyFf4AVPfKoUvhqQDz57TJ6CA Makefile
 
+[get]
+docker exec ipfs_host ipfs cat /ipfs/QmU2oUVxqzySCzbHcLU2LYyFf4AVPfKoUvhqQDz57TJ6CA > Makefile
+
 [stop]
 docker stop ipfs_host
 
