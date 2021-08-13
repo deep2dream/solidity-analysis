@@ -22,3 +22,8 @@ vim end-to-end/packages/react-app/src/constants.js
 >>>
 
 ```
+### http://localhost:3001/
+```
+Local Transaction Sent
+0x7d2c039075f99f5ec3d1be79567f7074ae47dc7287a5178b55a27f3929c5b55b
+```
