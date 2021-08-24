@@ -1,3 +1,4 @@
+
 - zero knowledge proof vs. NFT
 ### proof document
 - unique issued
@@ -11,7 +12,7 @@ invoice/receipt|owner|-
 bill|owner|-
 ticket|owner|-
 visa, passport|owner|-
-will, suicide note|public|-
+will, suicide note|restricted|-
 statement, claim|public|-
 chat/call dialogue|private|-
 ### At a glance
