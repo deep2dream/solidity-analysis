@@ -18,11 +18,15 @@ alias solc425='function _solc425(){ docker run --rm -v `pwd`:/root ethereum/solc
 alias solc424='function _solc424(){ docker run --rm -v `pwd`:/root ethereum/solc:0.4.24 --bin --abi --optimize --overwrite /root/$1 -o /root/build; };_solc424'
 
 ```
-### Cost
+### [Cost/Gas Optimization](https://mudit.blog/solidity-gas-optimization-tips/)
+- Smaller Calculations, the Better
+- [uint256 value; is cheaper than uint256 value = 0;](https://medium.com/coinmonks/gas-optimization-in-solidity-part-i-variables-9d5775e43dde)
 ```
 [public vs. external]
 external function cheaper than public function.
 
+[global vs. local]
+global/storage/member variable is much more expensive than function variable.
 ```
 ## Complex
 ### NFT
@@ -37,7 +41,4 @@ ERC20 | ERC721
 mapping(address => uint256) | tokenURI,tokenId, MetaData
 
 ### Defi
-## Metrics
-### Gas Optimization
-### Readable Coding
 
