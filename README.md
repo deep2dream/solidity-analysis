@@ -35,7 +35,11 @@ global/storage/member variable is much more expensive than function variable.
 - https://miro.com/app/board/o9J_kxZnJOk=/
 - https://consensys.github.io/smart-contract-best-practices/known_attacks/
 - https://medium.com/hackernoon/hackpedia-16-solidity-hacks-vulnerabilities-their-fixes-and-real-world-examples-f3210eba5148
-
+## ToolChains
+- Remix
+- Truffle
+- Ganache
+- HardHat
 ## Use Cases
 ### NFT
 keywords: authenticity, royalty
