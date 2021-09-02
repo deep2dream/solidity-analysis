@@ -1,0 +1,2 @@
+- https://mudit.blog/solidity-gas-optimization-tips/
+- https://medium.com/coinmonks/gas-optimization-in-solidity-part-i-variables-9d5775e43dde
