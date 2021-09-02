@@ -10,7 +10,7 @@ DEX:  Blockchain + Exchange(opposite-CEX)
 NFT:  Blockchain + Asset(Art)
 ...
 ```
-### - Build
+### How to Build
 ```
 [alias]
 alias solc420='function _solc420(){ docker run --rm -v `pwd`:/root ethereum/solc:0.4.20 --bin --abi --optimize --overwrite /root/$1 -o /root/build; };_solc420'
@@ -18,17 +18,12 @@ alias solc420='function _solc420(){ docker run --rm -v `pwd`:/root ethereum/solc
 [build]
 solc420 test.sol
 ```
+## Metrics
 ### - [Cost/Gas Optimization](https://mudit.blog/solidity-gas-optimization-tips/)
 - [Smaller Calculations, the Better](https://mudit.blog/solidity-gas-optimization-tips/)
 - [uint256 value; is cheaper than uint256 value = 0;](https://medium.com/coinmonks/gas-optimization-in-solidity-part-i-variables-9d5775e43dde)
-```
-[public vs. external]
-external function cheaper than public function.
-
-[global vs. local]
-global/storage/member variable is much more expensive than function variable.
-```
-
+- public vs. external: external function cheaper than public function.
+- global vs. local: global/storage/member variable is much more expensive than function variable.
 ### - Security/Vulnerability
 - https://forum.openzeppelin.com/t/compiled-list-of-solidity-vulnerabilities/1081/5
 - https://securityboulevard.com/2020/05/solidity-top-10-common-issues/
