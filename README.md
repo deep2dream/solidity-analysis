@@ -4,7 +4,7 @@
 solidity sample codes, patterns, everything for it
 
 ```
-DeFi: Blockchain + Bank(lend, loan)
+DeFi: Blockchain + Bank(Lend, Loan)
 IPFS: Blockahin + Storage
 DEX:  Blockchain + Exchange(opposite-CEX)
 NFT:  Blockchain + Asset(Art)
