@@ -4,10 +4,10 @@
 solidity sample codes, patterns, everything for it
 
 ```
-Defi: blockchain + bank function(lend, loan)
-IPFS: blockahin + storage
-DEX:  blockchain + Exchange(opposite-CEX)
-NFT:  blockchain + Asset(Art)
+DeFi: Blockchain + Bank(lend, loan)
+IPFS: Blockahin + Storage
+DEX:  Blockchain + Exchange(opposite-CEX)
+NFT:  Blockchain + Asset(Art)
 ...
 ```
 ### - Build
@@ -48,4 +48,4 @@ ERC20 | ERC721
 ------|------
 mapping(address => uint256) | tokenURI,tokenId, MetaData
 
-### Defi
+### DeFi
