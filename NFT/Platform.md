@@ -14,7 +14,7 @@ yarn start
 ### [nft.storage](https://nft.storage/)
 - [create an API key](https://nft.storage/manage/)
 ```
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDZDNzgyODJDOTkxYUEzMjg0OUNmMzYyZEQwOEI0RDlDMDE0NEM2QzEiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTYyODg0NDI2MjExNiwibmFtZSI6Im5mdC1zY2hvb2wifQ.PXdFt6qYR3AqJ0wPR9FO8UqHM1ALpEYfd_KOY8I44Xs
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDlDZmZBODE2NjkzMDIyN0YyMDQ0MEIzMjYyNThCN0QwNzllNUVBNjUiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTYzMzE2MDk1NDUxNCwibmFtZSI6Im5mdC5zdG9yYWdlIn0.LJvsAYPDXq8TDqRW62YDy7jLJToEjTpkLOMp5in5TJM
 ```
 ###
 ```
