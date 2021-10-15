@@ -1,3 +1,22 @@
+### Syntax
+ch.|solidity|python|java
+---|--------|------|---
+pragma|pragma solidity ^0.4.16;<br>
+**variables**|
+address|***//tx -> contract***<br>msg.sender<br><br>// <br>receiver.transfer(amount);|
+**modifiers**|
+public|
+private|
+extern|
+intern|
+payable|
+view|
+**built-in**|
+require|
+
+**event**|
+
+
 ### Playground
 - https://soliditylang.org/
 # solidity-analysis
