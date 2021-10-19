@@ -2,9 +2,10 @@
 ch.|solidity|python|java
 ---|--------|------|---
 pragma|pragma solidity ^0.4.16;<br>
-**variables**|
-address|***//tx -> contract***<br>msg.sender<br><br>// <br>receiver.transfer(amount);|
-**modifiers**|
+**types**|
+uint(uint256)|// definition<br> uint public amount;
+address|***//tx -> contract***<br>msg.sender<br><br>// contract address to receiver<br>receiver.transfer(amount);|
+**modifiers**|modifier onlySeller() {<br>&nbsp;&nbsp;&nbsp;require(msg.sender == seller);<br>&nbsp;&nbsp;&nbsp;_;<br>}
 public|
 private|
 extern|
@@ -13,12 +14,12 @@ payable|
 view|
 **built-in**|
 require|
-
 **event**|
-
+**enum**|
 
 ### Playground
 - https://soliditylang.org/
+- https://solidity-kr.readthedocs.io/
 # solidity-analysis
 solidity sample codes, patterns, everything for it
 
