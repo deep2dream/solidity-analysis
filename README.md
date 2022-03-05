@@ -1,16 +1,16 @@
 # Secure & Cheap
 ### Syntax
-ch.|solidity|java|javascript
----|--------|------|---
-pragma|pragma solidity ^0.4.16;<br>
+ch.|solidity|javascript
+---|--------|-----
+pragma|```pragma solidity ^0.4.16;```
 **types**|
 boolean|bool
 int|// 8,16,32,64,128,256
-uint(uint256)|// 8,16,32,64,128,256<br>// definition<br> uint public amount;
-address|***//tx -> contract***<br>msg.sender<br><br>// contract address to receiver<br>receiver.transfer(amount);|
-array|bytes32[] proposalNames;
-struct|contract ContractName {}|
-**modifiers**|modifier onlySeller() {<br>&nbsp;&nbsp;&nbsp;require(msg.sender == seller);<br>&nbsp;&nbsp;&nbsp;_;<br>}
+uint(uint256)|// 8,16,32,64,128,256<br>// definition<br>``` uint public amount;```
+address|***//tx -> contract***<br>```msg.sender```<br><br>// contract address to receiver<br>```receiver.transfer(amount);```|
+array|```bytes32[] proposalNames;```
+struct|```contract ContractName {}```|
+**modifiers**|*modifier onlySeller() {<br>&nbsp;&nbsp;&nbsp;require(msg.sender == seller);<br>&nbsp;&nbsp;&nbsp;_;<br>}*
 public|
 private|
 extern|
@@ -23,6 +23,7 @@ require|
 **enum**|
 
 ### Playground
+* [x] https://codedamn.com/online-compiler/solidity
 - https://soliditylang.org/
 - https://solidity-kr.readthedocs.io/
 # solidity-analysis
