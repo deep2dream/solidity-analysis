@@ -1,33 +1,25 @@
 ## interview questions for solidity
 - https://eattheblocks.com/the-ultimate-collection-of-solidity-interview-questions/
-### Access Control
-- with modifier
-```solidity
-  function protectedFunction() external onlyAdmin() {
-    ...
-  }
+### Modifiers(Decorators)
+type|without|with
+--------------------|-----------|-----
+```Access Control```|```function protectedFunction() external {```<br>```....require(msg.sender == admin, 'only admin');```<br>```....~~~```<br>```}```|```function protectedFunction() external onlyAdmin() {```<br>```....~~~```<br>```}```<br><br>```modifier onlyAdmin() {```<br>```....require(msg.sender == admin, 'only admin');```<br>```...._;```<br>```}```
 
-  modifier onlyAdmin() {
-    require(msg.sender == admin, 'only admin');
-    _;
-  }
-```
-- without modifier
-```solidity
-  function protectedFunction() external {
-    require(msg.sender == admin, 'only admin');
-    ...
-  }
-```
-### state variables vs. local variables
-```
-[state variables]
-public variables vs. private variables
-
-[private variables]
-private variables not really private, all data on blockchain is public
-```
+## Concepts
+### Variable Type
+type|expression|description
+----|----------|------------
+```state```|
+```local```|
+```public```|
+```private```|**private variables not really private, all data on blockchain is public*
+```internal```|
+```external```|
 ### data types - uint, address, strings
 ### container types - mapping, arrays
-### private vs. internal
-### public vs. external
+## Q & A
+Q|A
+---|-----
+```state vs. local```|
+```private vs. internal```|
+```public vs. external```|

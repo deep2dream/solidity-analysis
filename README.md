@@ -1,3 +1,8 @@
+* [ ] *Basics - Grammar*
+* [ ] *Environment Setup*
+* [ ] *Modules*
+* [ ] *TestCases*
+* [ ] *+Frontend*
 # Secure & Cheap
 ### Syntax
 ch.|solidity|javascript
@@ -24,8 +29,7 @@ require|
 
 ### Playground
 * [x] https://codedamn.com/online-compiler/solidity
-- https://soliditylang.org/
-- https://solidity-kr.readthedocs.io/
+* [ ] https://docs.soliditylang.org/en/latest/
 # solidity-analysis
 solidity sample codes, patterns, everything for it
 
