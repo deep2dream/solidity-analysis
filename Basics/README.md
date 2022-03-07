@@ -24,11 +24,13 @@ type|expression|description
 }
 ```local```|**function variables**
 ```storage```|**what is storage variable? What's diff with state variables**
+```public```|*public variables can be accessiblee from outside*
+```private```|*private variables can't be accessble from outside, but it's not really private, all data on blockchain is public*
 ### Visibility
 type|expression|description
 ----|----------|------------
 ```public```|
-```private```|**private variables not really private, all data on blockchain is public*
+```private```|*private variables not really private, all data on blockchain is public*
 ```internal```|
 ```external```|
 ### Modifiers

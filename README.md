@@ -4,6 +4,16 @@
 * [ ] *TestCases*
 * [ ] *+Frontend*
 # Secure & Cheap
+### Tools
+*Solidity is a simple programming language. But it is supported by mountains of beautiful assisting tools. Maybe it's simplicity makes that possible. You can boost up your programming using those tools. You will be impressed by effectiveness they brings.*
+Type|Func.
+-----|---
+**VS Extensions**
+solidity|
+Solidity Debugger|funcSigs
+Solidity Visual Developer|diagram(call graph),uml
+Solidity Contract Flattener|
+**Auditing**
 ### Syntax
 ch.|solidity|javascript
 ---|--------|-----
