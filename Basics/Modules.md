@@ -8,4 +8,4 @@ Func.|Implementation
 ***Exchange***|```uint accumulated = 0;```
 ```coin2token```|*```function coin2token(address tokenAddr) public payable {```<br>```....// sender to contract```<br>```....accumulated = accumulated.add(msg.value);```<br>```....// token: founder to sender```<br>```....ERC20Token(tokenAddr).transferFrom(founder, msg.sender, msg.value);```<br>```}```*
 ```token2coin```|*```function token2coin(address tokenAddr, uint256 amount) public payable returns (bool) {```<br>```....require(accumulated > amount);```<br>```....// token: sender to founder```<br>```....if (!ERC20Token(tokenAddr).transferFrom(msg.sender, founder, amount)) {```<br>```........return false;```<br>```....}```<br>```....// founder to sender```<br>```....if (!msg.sender.call.value(amount)(true, 3)) {```<br>```........return false;```<br>```....}```<br>```....accumulated = accumulated.sub(amount);```<br>```....return true;```<br>```}```*
-```random```|
+```destructor```|```function kill() external onlyOwner {```<br>```....require (lockedInBets == 0, "All bets should be processed (settled or refunded) before self-destruct.");```<br>```....selfdestruct(payable(owner));```<br>```}```
