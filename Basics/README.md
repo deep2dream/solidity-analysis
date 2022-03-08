@@ -16,6 +16,10 @@ type|without|with
 ```now```|```block.timestamp```
 ```uint(address(this))```|```function addr2uint(address a) internal pure returns (uint256) {```<br>```....return uint256(uint160(a));```<br>```}```
 ```msg.sender.send(amount)```|```payable(msg.sender).send(amount)```
+```this.balance```|```address(this).balance```
+```uint(-1)```|```type(uint).max```
+event:```Transfer(...)```|```emit Transfer(...)```
+```chainid```|```chainid()```
 ## Concepts
 ### Variable Type
 type|expression|description
@@ -29,10 +33,10 @@ type|expression|description
 ### Visibility
 type|expression|description
 ----|----------|------------
-```public```|
-```private```|*private variables not really private, all data on blockchain is public*
-```internal```|
-```external```|
+```public```|*accessible from outside*
+```private```|*inaccessible from outside*
+```internal```|*prohibit inheritance*
+```external```|*allow inheritance*
 ### Modifiers
 type|expression|description
 ----|----------|------------
