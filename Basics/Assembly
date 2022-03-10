@@ -1,0 +1,36 @@
+- https://docs.soliditylang.org/en/latest/assembly.html
+- https://www.geeksforgeeks.org/solidity-assembly/
+### syntax
+type|expr.
+---|----
+```default```|```assembly {}```
+```memory safe```|```assembly ("memory-safe") {}```
+```for```|```for```<br>```....{ let end := add(data, mul(len, 0x20)) }```<br>```....lt(data, end)```<br>```....{ data := add(data, 0x20) }```<br>```{```<br>```}```
+***variable***|
+```allocate```|***```let c := add(a, 16)```=```c = a+16```, where c is avalue, not a pointer and a is function input```uint a```***<br>```let d := add(sload(c), 12)```
+```deallocate```|*```b := d```<br>```b := add(b, c)```, if you use sload(c), it exists. if not, it's deallocated when inferred in ```add(b,c)```?*
+```allocate memory```|*```mstore(0x80, c)```, save c at 0x80*
+### func.
+func.|expl.
+---|----
+```let size := extcodesize(_addr)```|*return size of code at address*
+```extcodecopy(_addr, add(code, 0x20), 0, size)```
+```code = new bytes(size)```|[*equals to *``` code := mload(0x40)```?](https://ethereum.stackexchange.com/questions/9603/understanding-mload-assembly-function) [Read this](https://ethereum.stackexchange.com/questions/9603/understanding-mload-assembly-function)*, different explanation. first ```new bytes(x)``` write it from 0x40?* ->*In solidity, the 0x40 slot in memory is special: it contains the "free memory pointer" which points to the end of the currently allocated memory. When you use inline assembly, you should load the data stored at 0x40 and then only write to addresses after the result. When you're done, if you want to keep that memory allocated, you should overwrite 0x40 with the new value of the free memory pointer.*
+**explain with example1**
+```sum += _data[i]```|***```sum := add(sum, mload(add(add(_data, 0x20), mul(i, 0x20))))```, where ```uint[] memory _data,uint sume```***
+```let len := mload(_data)```|*Load the length (first 32 bytes)*
+```let end := add(data, mul(len, 0x20))```|end of _data
+```add(_data, 0x20)```|*```_data+0x20```, where _data is pointer value, mload(_data) contains lenth of _data, so skip the value.*
+```mul(i, 0x20)```|```i*0x20```, where i is value
+``` lt(data, end)```|```if data==end: break```, where data & end are both pointer value
+```data := add(data, 0x20)```|```data+0x20```, where data is pointer value
+```sum := add(sum, mload(data))```|```sum+*data```, where sum is value and data is pointer value
+```r := mul(x, sload(b.slot))```|*, where ```uint b;```outside assembly*
+```sload(b.slot)```|
+```returndatasize()```|
+```returndatacopy(0, 0, returndatasize())```|
+```revert(0, returndatasize())```|```
+### Q &A
+Q|A
+---|----
+```mload(paddr) vs mstore(paddr,v)```|*where paddr means pointer address in memory. **mload** means read while mstore means **write**<br>```mstore(dest,mload(src))``` this syntax copy content of src to dest by 32byte(256bit) because ```uint dest, uint src``` - no more.*

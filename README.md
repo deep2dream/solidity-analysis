@@ -61,7 +61,8 @@ solc420 test.sol
 ## Metrics
 ### 1. [Cost/Gas Optimization](https://mudit.blog/solidity-gas-optimization-tips/)
 - [Smaller Calculations, the Better](https://mudit.blog/solidity-gas-optimization-tips/)
-- [uint256 value; is cheaper than uint256 value = 0;](https://medium.com/coinmonks/gas-optimization-in-solidity-part-i-variables-9d5775e43dde)
+- [```uint256 value;``` is cheaper than ```uint256 value = 0;```](https://medium.com/coinmonks/gas-optimization-in-solidity-part-i-variables-9d5775e43dde)
+- [```f(uint128, uint128, uint256)``` better than ```f(uint128, uint256, uint128)```](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html#layout-of-state-variables-in-storage)
 - Public vs. External: External functions cheaper than public functions.
 - Global vs. Local: global/storage/member variables are more expensive than function variables.
 - uint8 is not cheaper than unit256
