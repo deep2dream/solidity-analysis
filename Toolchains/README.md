@@ -2,8 +2,11 @@
 tool|guide
 ----|-----
 ```nvm```|```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh \| bash```<br>```nvm install 12.18.1```
-```ganache-cli```|*```npm install -g ganache-cli```for installation<br>```ganache-cli```for run*
+```ganache-cli```|***standalone node** for simulation<br>**installation:**```npm install -g ganache-cli```<br>**run:**```ganache-cli```*
 ```web3.js```|```npm install web3```or```yarn add web3```or```npm install ethereum/web3.js --save```
+[```solidity(vscode extention)```](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity&ssr=false#overview)|
+[```metamask(chrome extention)```](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)|
+```ganache-cli & metamask```|```default chainid:1337```you can set it when run```ganache-cli -f <YourNODE> --chainId <newNumber>```
 [hardhat](https://hardhat.org/hardhat-network/)|
 ```truffle```|https://github.com/gregbkr/geth-truffle-docker<br>https://www.trufflesuite.com/docs/ganache/overview
 ***Check.vulnerability***
