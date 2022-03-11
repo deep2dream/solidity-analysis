@@ -75,7 +75,7 @@ solc420 test.sol
 - Delegatecall
 - Floating Points and Precision
 - ...
-## ToolChains
+## [IDEs](https://docs.soliditylang.org/en/latest/resources.html)
 - Remix
 - Truffle
 - Ganache

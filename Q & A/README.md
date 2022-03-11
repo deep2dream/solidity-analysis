@@ -1,0 +1,2 @@
+- https://applicature.com/blog/blockchain-technology/solidity-interview
+- https://i6mi6.medium.com/the-ultimate-collection-of-ethereum-solidity-and-smart-contracts-interview-questions-ef610d250012

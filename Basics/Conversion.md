@@ -19,3 +19,4 @@ where|from|to
 ```pure``` 2 ```view & non-payable```|
 ```view```2 ```non-payable ```|
 ```payable```2 ```non-payable``` |
+```contract```2```address```|```address(this)```

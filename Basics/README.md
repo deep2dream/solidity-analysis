@@ -61,7 +61,11 @@ type|expl.
 Q|A
 ---|-----
 ```state vs. local```|*it depends where it is defined.*
-```local variable can be public?```|```state can be public or private```
+```storage variable```==```state variable```|yes
+```memory variable```==```local variable```|yes
+```function variable```==```memory variable```|no, default is
+```local variable can be public?```|
+```state variable can be memory variable```|
 ```private vs. internal```|
 ```public vs. external```|
 ```constant vs. immutable```|
@@ -84,5 +88,3 @@ type|storage|memory
 ----|-------|-----
 ```uint8[4] a;```|```32byte(8*4)```|```128byte(32*4)```
 ```struct S {```<br>....```uint a;```<br>....```uint b;```<br>....```uint8 c;```<br>....```uint8 d;``````}```|```96byte(32*2+32)```|128byte(32*4)
-
-
