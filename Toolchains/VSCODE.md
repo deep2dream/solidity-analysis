@@ -1,0 +1,2 @@
+## Fix solidity version mismatch
+Mouse Right-Click, on Pop-Up menu, Select ```Solidity: Change workspace compiler version(Remote)```, then Select compiler version. It will save compiler version in .vscode/settings.json. 
