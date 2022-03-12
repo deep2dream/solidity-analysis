@@ -7,8 +7,10 @@ tool|guide
 [```solidity(vscode extention)```](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity&ssr=false#overview)|
 [```metamask(chrome extention)```](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)|
 ```ganache-cli & metamask```|```default chainid:1337```you can set it when run```ganache-cli -f <YourNODE> --chainId <newNumber>```
+[```openzeppelin```](https://docs.openzeppelin.com/cli/)
 [hardhat](https://hardhat.org/hardhat-network/)|
-```truffle```|https://github.com/gregbkr/geth-truffle-docker<br>https://www.trufflesuite.com/docs/ganache/overview
+[```truffle```](https://www.trufflesuite.com/docs/ganache/overview)|```npm install -g truffle```
+[```remix```](https://remix-ide.readthedocs.io/en/latest/file_explorer.html)
 ***Check.vulnerability***
 [diligence](https://consensys.net/diligence/tools/)|
 [mythril](https://github.com/ConsenSys/mythril)|

@@ -11,27 +11,36 @@ Type|Func.
 **VS Extensions**
 solidity|
 Solidity Debugger|funcSigs
-Solidity Visual Developer|diagram(call graph),uml
+Solidity Visual Developer|diagram(call graph),uml,auditing
 Solidity Contract Flattener|
 **Auditing**
 ### Syntax
 ch.|solidity|javascript
 ---|--------|-----
 pragma|```pragma solidity ^0.4.16;```
-**types**|
-boolean|bool
-int|// 8,16,32,64,128,256
-uint(uint256)|// 8,16,32,64,128,256<br>// definition<br>``` uint public amount;```
-address|***//tx -> contract***<br>```msg.sender```<br><br>// contract address to receiver<br>```receiver.transfer(amount);```|
-array|```bytes32[] proposalNames;```
-struct|```struct StructName {}```|
+**types**|https://docs.soliditylang.org/en/v0.5.4/abi-spec.html#types
+```bool```|```uint8 == bool```
+```int<M>```|```0 < M <= 256, M % 8 == 0```
+```uint<M>```|```0 < M <= 256, M % 8 == 0```<br>```uint==uint256```
+```bytes<M>```|```0<M<=32```
+```bytes```|```byte[]```
+address|```uint160==address```
+```fixed<M>x<N>```|```8 <= M <= 256, M % 8 ==0```,```0 < N <= 80```
+```ufixed<M>x<N>```|```8 <= M <= 256, M % 8 ==0```,```0 < N <= 80```
+```fixed```|```fixed128x18```
+```ufixed```|```ufixed128x18```
+```function```|```==bytes24(bytes4+bytes20)```,bytes4 for func.selector, bytes20 for func.address
+```<type>[M]```|```fixed array```
+```string```|```dynamic sized```
+```(T1,T2,...,Tn)```|***tuple***```T1, …, Tn, n >= 0```
+```struct```|***```tuple```***
+```address payable```|```address```
 **modifiers**|*modifier onlySeller() {<br>&nbsp;&nbsp;&nbsp;require(msg.sender == seller);<br>&nbsp;&nbsp;&nbsp;_;<br>}*
-public|
-private|
-extern|
-intern|
-payable|
-view|
+***visibility & Getter***|https://docs.soliditylang.org/en/v0.5.4/contracts.html#visibility-and-getters
+public|*```part of the contract interface```can be either **called internally or via messages***
+private|***only visible for the contract they are defined in** and not in derived contracts.*
+external|*```part of the contract interface```<br>can be called **from other contracts and via transactions**.<br>can**not** be called **internally** (i.e. ```f()``` does **not** work, but ```this.f()``` works)<br>External functions are **sometimes more efficient when they receive large arrays of data**.*
+internal|*can only be accessed internally (i.e. from **within the current contract** or **contracts deriving from it**), **without** using ```this```.*
 **built-in**|
 require|
 **event**|
@@ -39,24 +48,13 @@ require|
 
 ### Playground
 * [x] https://codedamn.com/online-compiler/solidity
+### Tutorials
 * [ ] https://docs.soliditylang.org/en/latest/
-# solidity-analysis
-solidity sample codes, patterns, everything for it
-
-```
-DeFi: Blockchain + Bank(Lend, Loan)
-IPFS: Blockahin + Storage
-DEX:  Blockchain + Exchange(opposite-CEX)
-NFT:  Blockchain + Asset(Art)
-...
-```
-### How to Build
-```
-[alias]
-alias solc420='function _solc420(){ docker run --rm -v `pwd`:/root ethereum/solc:0.4.20 --bin --abi --optimize --overwrite /root/$1 -o /root/build; };_solc420'
-
-[build]
-solc420 test.sol
+### Build
+---|----
+```docker```|```alias solc420='function _solc420(){ docker run --rm -v `pwd`:/root ethereum/solc:0.4.20 --bin --abi --optimize --overwrite /root/$1 -o /root/build; };_solc420'```<br>```solc420 test.sol```
+```local```|```npm install -g solc```
+```online```|```use remix```
 ```
 ## Metrics
 ### 1. [Cost/Gas Optimization](https://mudit.blog/solidity-gas-optimization-tips/)
@@ -76,10 +74,15 @@ solc420 test.sol
 - Floating Points and Precision
 - ...
 ## [IDEs](https://docs.soliditylang.org/en/latest/resources.html)
-- Remix
-- Truffle
-- Ganache
-- HardHat
+tool|features
+----|---
+```Remix```|```compile```online
+```Truffle```|
+```Ganache```|```Standalone Node```localhost testing
+```HardHat```|```develop a project - create, compile, test, deploy```
+```ganache-cli + metamask```|
+```ganache-cli + truffle```|
+
 ## Use Cases
 ### NFT
 keywords: authenticity, royalty
