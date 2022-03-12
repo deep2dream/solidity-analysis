@@ -1,6 +1,8 @@
 
 ## Tutorials
 * [ ] https://github.com/deep2chain/the-osun-river-nft
+* [ ] https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/
+* [ ] https://nftschool.dev/tutorial/minting-service/#getting-set-up
 ##
 - zero knowledge proof vs. NFT
 ### proof document
