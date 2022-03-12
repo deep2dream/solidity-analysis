@@ -5,8 +5,12 @@
 ## What hardhat does? - compile, deploy, test, and debug
 trait|desp.
 -----|----
-```create a hardhat project```|```mkdir <projectname>```<br>```cd <projectname>```<br>```npx hardhat```
-```sample.hardhat.project```|*<br>contracts/<br>scripts/<br>test/<br>hardhat.config.js*
+```install```|```npm install --save-dev hardhat@2.4.3```
+```new.project```|*```mkdir <projectname>;cd <projectname>```<br>```npx hardhat```<br><br>//hardhat.project.structure```|<br>contracts/<br>scripts/<br>test/<br>hardhat.config.js*
+```new.contract```|```cd contracts && touch <contractName>.sol```
+***compile***|```npx hardhat compile```
+***test***|```npx hardhat test```
+***deploy***|```touch scripts/deploy.js```<br>```npx hardhat run scripts/deploy.js```
 ## Guide
 step|js|ts
 ----|---|----

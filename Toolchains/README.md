@@ -6,9 +6,9 @@ tool|guide
 ```web3.js```|```npm install web3```or```yarn add web3```or```npm install ethereum/web3.js --save```
 [```solidity(vscode extention)```](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity&ssr=false#overview)|
 [```metamask(chrome extention)```](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)|
-```ganache-cli & metamask```|```default chainid:1337```you can set it when run```ganache-cli -f <YourNODE> --chainId <newNumber>```
-[```openzeppelin```](https://docs.openzeppelin.com/cli/)
-[hardhat](https://hardhat.org/hardhat-network/)|
+```ganache-cli & metamask```|```chainid(default):1337```, but you can set its chainid manually when it's starting like this. ```ganache-cli -f <YourNODE> --chainId <newNumber>```
+[```openzeppelin```](https://docs.openzeppelin.com/cli/)|```npm install @openzeppelin/contracts```
+[hardhat](https://hardhat.org/hardhat-network/)|```npm install --save-dev hardhat@2.4.3```
 [```truffle```](https://www.trufflesuite.com/docs/ganache/overview)|```npm install -g truffle```
 [```remix```](https://remix-ide.readthedocs.io/en/latest/file_explorer.html)
 ***Check.vulnerability***
@@ -21,3 +21,8 @@ tool|guide
 ***Bin Analyzer***
 ***Test Framework***
 [embark](https://github.com/embarklabs/embark)
+
+## Q & A
+Q|A
+---|---
+```truffle vs. hardhat```|
