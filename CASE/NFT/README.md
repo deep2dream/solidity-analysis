@@ -1,4 +1,7 @@
 
+## Tutorials
+* [ ] https://github.com/deep2chain/the-osun-river-nft
+##
 - zero knowledge proof vs. NFT
 ### proof document
 - unique issued
@@ -24,4 +27,5 @@ IPFS + FileCoin
 ### NFT with Lisk
 - https://lisk.com/documentation/lisk-sdk/tutorials/nft.html
 ### Standards
-- [721](https://eips.ethereum.org/EIPS/eip-721)
+* [ ] [721](https://eips.ethereum.org/EIPS/eip-721)
+* [ ] https://soliditydeveloper.com/erc-721

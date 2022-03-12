@@ -25,7 +25,15 @@ step|js|ts
 ***compile***|```npx hardhat compile```|```yarn hardhat compile```
 ***test***|```npm install --save-dev @nomiclabs/hardhat-waffle@2.0.1```<br>```..................... @ethereum-waffle@3.3.0 chai@4.3.4```<br>```.................... @nomiclabs/hardhat-ethers@2.0.2 ethers@5.1.4```<br>```mkdir test && cd test && touch test.js```<br>```npx hardhat test```|```npx hardhat test```
 ***deploy***|```touch scripts/deploy.js```<br>```npx hardhat run scripts/deploy.js```|```yarn hardhat deploy```np
-
+## [Deploy on Different Networks](https://ethereum.stackexchange.com/questions/110271/hardhat-connecting-to-localhost-contract-for-tasks)
+network|usage
+---|----
+```localhost```|*run localhost:```npx hardhat node``` on one terminal<br>run task:```npx hardhat run scripts/deploy.js``` on the other terminal*
+```ropsten```|```npx hardhat run scripts/deploy.js --network ropsten```
+## Q & A
+Q|A
+-|-
+```npx hardhat console```vs.```npx hardhat node```
 ### Set Up the Project
 ```bash
 # mkdir nft; cd nft
