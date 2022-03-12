@@ -28,8 +28,18 @@ step|js|ts
 ## [Deploy on Different Networks](https://ethereum.stackexchange.com/questions/110271/hardhat-connecting-to-localhost-contract-for-tasks)
 network|usage
 ---|----
-```localhost```|*run localhost:```npx hardhat node``` on one terminal<br>run task:```npx hardhat run scripts/deploy.js``` on the other terminal*
+[```localhost```]((https://ethereum.stackexchange.com/questions/110271/hardhat-connecting-to-localhost-contract-for-tasks))|*run localhost:```npx hardhat node``` on one terminal<br>run task:```npx hardhat run scripts/deploy.js``` on the other terminal*
 ```ropsten```|```npx hardhat run scripts/deploy.js --network ropsten```
+## [Run script/x.js on Different Network](https://hardhat.org/guides/scripts.html)
+network|usage
+---|----
+[```localhost```](https://hardhat.org/guides/scripts.html)|
+## + Other Tools
+tool|usage
+----|----
+```ganache-cli```|
+```truffle```|
+[```vscode```](https://hardhat.org/guides/vscode-tests.html)|
 ## Q & A
 Q|A
 -|-
