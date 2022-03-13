@@ -1,8 +1,13 @@
-* [ ] *Basics - Grammar*
-* [ ] *Environment Setup*
-* [ ] *Modules*
-* [ ] *TestCases*
-* [ ] *+Frontend*
+## Sca
+* [x] hardhat+react+graghql: https://github.com/scaffold-eth/scaffold-eth-examples
+
+## Plan
+* [x] *Basics - Grammar*
+* [x] *Environment Setup*
+* [x] *Modules*
+* [x] *TestCases*
+* [ ] *+Frontend - React*
+* [ ] *+Backend - GraphQL*
 # Secure & Cheap
 ### Tools
 *Solidity is a simple programming language. But it is supported by mountains of beautiful assisting tools. Maybe it's simplicity makes that possible. You can boost up your programming using those tools. You will be impressed by effectiveness they brings.*
