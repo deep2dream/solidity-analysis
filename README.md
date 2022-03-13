@@ -51,6 +51,7 @@ require|
 ### Tutorials
 * [ ] https://docs.soliditylang.org/en/latest/
 ### Build
+cat.|usage
 ---|----
 ```docker```|```alias solc420='function _solc420(){ docker run --rm -v `pwd`:/root ethereum/solc:0.4.20 --bin --abi --optimize --overwrite /root/$1 -o /root/build; };_solc420'```<br>```solc420 test.sol```
 ```local```|```npm install -g solc```
