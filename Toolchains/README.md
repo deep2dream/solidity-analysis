@@ -3,7 +3,8 @@ api|trait
 ---|---
 ```alchemy```|```https://eth-ropsten.alchemyapi.io/v2/7mX5......RAIP```
 ```infura```|```https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161```
-```etherscan```|
+```etherscan```|```npm install @nomiclabs/hardhat-etherscan```
+```polygonscan```|```npm install dotenv``` &```npm install @nomiclabs/hardhat-etherscan```
 
 # toolchains
 tool|guide
