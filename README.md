@@ -1,5 +1,6 @@
-## Sca
-* [x] hardhat+react+graghql: https://github.com/scaffold-eth/scaffold-eth-examples
+## Tutorials
+* [x] Scaffold(hardhat+react+graghql): https://github.com/scaffold-eth/scaffold-eth-examples
+* [x] https://solidity-by-example.org/
 
 ## Plan
 * [x] *Basics - Grammar*
