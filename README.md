@@ -29,7 +29,7 @@ pragma|```pragma solidity ^0.4.16;```
 ```int<M>```|```0 < M <= 256, M % 8 == 0```
 ```uint<M>```|```0 < M <= 256, M % 8 == 0```<br>```uint==uint256```
 ```bytes<M>```|```0<M<=32```
-```bytes```|```byte[]```
+```bytes```|```byte[]
 address|```uint160==address```
 ```fixed<M>x<N>```|```8 <= M <= 256, M % 8 ==0```,```0 < N <= 80```
 ```ufixed<M>x<N>```|```8 <= M <= 256, M % 8 ==0```,```0 < N <= 80```
@@ -67,7 +67,7 @@ cat.|usage
 ```docker```|```alias solc420='function _solc420(){ docker run --rm -v `pwd`:/root ethereum/solc:0.4.20 --bin --abi --optimize --overwrite /root/$1 -o /root/build; };_solc420'```<br>```solc420 test.sol```
 ```local```|```npm install -g solc```
 ```online```|```use remix```
-```
+
 ## Metrics
 ### 1. [Cost/Gas Optimization](https://mudit.blog/solidity-gas-optimization-tips/)
 - [Smaller Calculations, the Better](https://mudit.blog/solidity-gas-optimization-tips/)
