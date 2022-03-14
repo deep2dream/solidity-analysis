@@ -36,8 +36,8 @@ type|expression|description
 ----|----------|------------
 ```public```|*accessible from outside*
 ```private```|*inaccessible from outside*
-```internal```|*prohibit inheritance*
-```external```|*allow inheritance*
+```internal```|*inaccessible from anther contract*
+```external```|*accessible from another contract*
 ### [Modifiers](https://docs.soliditylang.org/en/latest/cheatsheet.html#modifiers)
 type|applied to|description
 ----|----------|--
