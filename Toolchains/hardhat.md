@@ -1,29 +1,56 @@
 - https://www.freecodecamp.org/news/solidity-tutorial-hardhat-nfts/
 - https://github.com/taisukemino/hardhat-nft-tutorial
+- https://hardhat.org/
+
+## What hardhat does? - compile, deploy, test, and debug
+trait|desp.
+-----|----
+```install```|```npm install --save-dev hardhat@2.4.3```
+```new.project```|*```mkdir <projectname>;cd <projectname>```<br>```npx hardhat```<br><br>//hardhat.project.structure```|<br>contracts/<br>scripts/<br>test/<br>hardhat.config.js*
+```new.contract```|```cd contracts && touch <contractName>.sol```
+***compile***|```npx hardhat compile```
+***test***|```npx hardhat test```
+***deploy***|```touch scripts/deploy.js```<br>```npx hardhat run scripts/deploy.js```
+## Guide
+step|js|ts
+----|---|----
+***hardhat.init***
+```init```|```npm init --yes```|```yarn init --yes```
+```install```|```npm install --save-dev hardhat@2.4.3```|yarn add -D hardhat```
+```config```|```hardhat.config.js```|```hardhat.config.ts```<br>```tsconfig.json```
+***write.contract***|
+```mk.tree```|```mkdir contracts && cd contracts && touch MyCryptoLions.sol```
+```add.deps```|```npm install --save-dev @openzeppelin/contracts@3.4.0```|```npm install @openzeppelin/contracts```
+```write.file```|```vim MyCryptoLions.sol```
+***compile***|```npx hardhat compile```|```yarn hardhat compile```
+***test***|```npm install --save-dev @nomiclabs/hardhat-waffle@2.0.1```<br>```..................... @ethereum-waffle@3.3.0 chai@4.3.4```<br>```.................... @nomiclabs/hardhat-ethers@2.0.2 ethers@5.1.4```<br>```mkdir test && cd test && touch test.js```<br>```npx hardhat test```|```npx hardhat test```
+***deploy***|```touch scripts/deploy.js```<br>```npx hardhat run scripts/deploy.js```|```yarn hardhat deploy```np
+## [Deploy on Different Networks](https://ethereum.stackexchange.com/questions/110271/hardhat-connecting-to-localhost-contract-for-tasks)
+network|usage
+---|----
+[```localhost```]((https://ethereum.stackexchange.com/questions/110271/hardhat-connecting-to-localhost-contract-for-tasks))|*run localhost:```npx hardhat node``` on one terminal<br>run task:```npx hardhat run scripts/deploy.js``` on the other terminal*
+```ropsten```|```npx hardhat run scripts/deploy.js --network ropsten```
+## [Run script/x.js on Different Network](https://hardhat.org/guides/scripts.html)
+network|usage
+---|----
+[```localhost```](https://hardhat.org/guides/scripts.html)|
+## + Other Tools
+tool|usage
+----|----
+```ganache-cli```|
+```truffle```|
+[```vscode```](https://hardhat.org/guides/vscode-tests.html)|
+## Q & A
+Q|A
+-|-
+```npx hardhat console```vs.```npx hardhat node```
 ### Set Up the Project
 ```bash
 # mkdir nft; cd nft
-nft# npm init --yes
-nft# npm install --save-dev hardhat@2.4.3
-nft# npx hardhat
->>> Choose Create an empty hardhat.config.js
-888    888                      888 888               888
-888    888                      888 888               888
-888    888                      888 888               888
-8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
-888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
-888    888 .d888888 888    888  888 888  888 .d888888 888
-888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
-888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
-
-Welcome to Hardhat v2.2.1
-
-? What do you want to do? … 
-▸ Create a sample project
-  Create an empty hardhat.config.js
-  Quit
-  
-# cat hardhat.config.js 
+nft$ npm init --yes
+nft$ npm install --save-dev hardhat@2.4.3
+nft$ npx hardhat
+$ cat hardhat.config.js 
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
@@ -34,12 +61,12 @@ module.exports = {
 ### Write and Compile the Contract
 ```
 [write]
-nft# mkdir contracts && cd contracts && touch MyCryptoLions.sol
-nft# npm install --save-dev @openzeppelin/contracts@3.4.0
-nft# vim  MyCryptoLions.sol
+nft$ mkdir contracts && cd contracts && touch MyCryptoLions.sol
+nft$ npm install --save-dev @openzeppelin/contracts@3.4.0
+nft$ vim  MyCryptoLions.sol
 
 [compile]
-nft/contracts# npx hardhat compile
+$ nft/contracts# npx hardhat compile
 >>>
 Downloading compiler 0.7.3
 Compiling 14 files with 0.7.3
@@ -72,11 +99,6 @@ contract MyCryptoLions is ERC721 {
 }
 ```
 ### Test
-```
-npm install --save-dev @nomiclabs/hardhat-waffle@2.0.1 ethereum-waffle@3.3.0 chai@4.3.4 @nomiclabs/hardhat-ethers@2.0.2 ethers@5.1.4
-mkdir test && cd test && touch test.js
-```
-- test.js
 ```js
 const { expect } = require("chai");
 
@@ -91,8 +113,8 @@ describe("MyCryptoLions", function () {
   });
 });
 ```
-```
-# npx hardhat test
+```bash
+$ npx hardhat test
 
 
   MyCryptoLions
@@ -106,8 +128,8 @@ msg.sender 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
 
 ```
 ### Deploy
-- scripts/deploy.js
 ```js
+//scripts/deploy.js
 async function main() {
   const MyCryptoLions = await hre.ethers.getContractFactory("MyCryptoLions");
   const myCryptoLions = await MyCryptoLions.deploy("MyCryptoLions", "MCL");
@@ -123,9 +145,8 @@ main()
     console.error(error);
     process.exit(1);
   });
-
 ```
-```
+```bash
 npx hardhat run scripts/deploy.js
 >>>
 name MyCryptoLions
