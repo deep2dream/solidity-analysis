@@ -12,7 +12,7 @@
 * [ ] *+Backend - GraphQL*
 # Secure & Cheap
 ### Tools
-*Solidity is a simple programming language. But it is supported by mountains of beautiful assisting tools. Maybe it's simplicity makes that possible. You can boost up your programming using those tools. You will be impressed by effectiveness they brings.*
+*Solidity is a simple programming language. But it is supported by mountains of beautiful assisting tools. Maybe its simplicity facilitates such a thing. You can boost up your programming using those tools. You will be impressed by effectiveness they brings.*
 Type|Func.
 -----|---
 **VS Extensions**
@@ -36,7 +36,7 @@ address|```uint160==address```
 ```ufixed<M>x<N>```|```8 <= M <= 256, M % 8 ==0```,```0 < N <= 80```
 ```fixed```|```fixed128x18```
 ```ufixed```|```ufixed128x18```
-```function```|```==bytes24(bytes4+bytes20)```,bytes4 for func.selector, bytes20 for func.address
+```function```|```==bytes24(bytes4+bytes20)```, ```bytes4``` for ```func.selector```, ```bytes20``` for ```func.address```
 ```<type>[M]```|```fixed array```
 ```string```|```dynamic sized```
 ```(T1,T2,...,Tn)```|***tuple***```T1, …, Tn, n >= 0```
