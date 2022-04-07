@@ -6,6 +6,7 @@ bytes8|	8
 bytes32|	32
 address|	20
 contract|	20
+function|24
 uint8|	1
 uint16|	2
 uint32|	4
