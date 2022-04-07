@@ -25,19 +25,19 @@ tx.origin|```tx.origin```!=```msg.sender```
 ### https://blog.sigmaprime.io/solidity-security.html
 Pattern|Expl.|Preventative Tech.
 ---|--------|---
-1. Re-Entrancy
-2. Arithmetic Over/Under Flows
-3. Unexpected Ether
-4. Delegatecall
-5. Default Visibilities
-6. Entropy Illusion
-7. External Contract Referencing
-8. Short Address/Parameter Attack
-9. Unchecked CALL Return Values
-10. Race Conditions / Front Running
-11. Denial Of Service (DOS)
-12. Block Timestamp Manipulation
-13. Constructors with Care
-14. Uninitialised Storage Pointers
-15. Floating Points and Numerical Precision
-16. tx.origin Authentication
+Re-Entrancy
+Arithmetic Over/Under Flows
+Unexpected Ether
+Delegatecall
+Default Visibilities
+Entropy Illusion
+External Contract Referencing
+Short Address/Parameter Attack
+Unchecked CALL Return Values
+Race Conditions / Front Running
+Denial Of Service (DOS)
+Block Timestamp Manipulation
+Constructors with Care
+Uninitialised Storage Pointers
+Floating Points and Numerical Precision
+tx.origin Authentication
