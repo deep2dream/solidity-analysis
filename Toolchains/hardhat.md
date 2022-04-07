@@ -6,17 +6,18 @@
 trait|desp.
 -----|----
 ```install```|```npm install --save-dev hardhat@2.4.3```
-```new.project```|*```mkdir <projectname>;cd <projectname>```<br>```npx hardhat```<br><br>//hardhat.project.structure```|<br>contracts/<br>scripts/<br>test/<br>hardhat.config.js*
+```new.project```|*```mkdir <projectname>;cd <projectname>```<br>```npx hardhat```<br><br>```//hardhat.project.structure```<br>contracts/<br>scripts/<br>test/<br>hardhat.config.js*
 ```new.contract```|```cd contracts && touch <contractName>.sol```
 ***compile***|```npx hardhat compile```
 ***test***|```npx hardhat test```
 ***deploy***|```touch scripts/deploy.js```<br>```npx hardhat run scripts/deploy.js```
+
 ## Guide
 step|js|ts
 ----|---|----
 ***hardhat.init***
 ```init```|```npm init --yes```|```yarn init --yes```
-```install```|```npm install --save-dev hardhat@2.4.3```|yarn add -D hardhat```
+```install```|```npm install --save-dev hardhat@2.4.3```|```yarn add -D hardhat```
 ```config```|```hardhat.config.js```|```hardhat.config.ts```<br>```tsconfig.json```
 ***write.contract***|
 ```mk.tree```|```mkdir contracts && cd contracts && touch MyCryptoLions.sol```
