@@ -1,5 +1,6 @@
 - https://github.com/gregbkr/geth-truffle-docker
 - http://trufflesuite.com/docs
+- https://trufflesuite.com/docs/truffle/getting-started/interacting-with-your-contracts.html
 
 ## usage
 step|expl.
